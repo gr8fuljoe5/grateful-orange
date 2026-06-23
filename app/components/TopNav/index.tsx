@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   Disclosure,
   DisclosureButton,
@@ -54,6 +55,8 @@ function MenuIcon({ open }: { open: boolean }) {
 }
 
 export default function TopNav() {
+  const [activeLink, setActiveLink] = useState("#about");
+
   return (
     <Disclosure
       as="header"
@@ -66,12 +69,18 @@ export default function TopNav() {
         <a
           href="#"
           aria-label="Grateful Orange home"
-          className="flex shrink-0 items-center font-brand text-xl tracking-tight sm:text-4xl font-bold"
+          className="flex shrink-0 flex-col font-brand text-xl tracking-tight sm:text-4xl"
         >
-          <span className="brand-grateful">Grateful</span>
-          <span className="ml-1.5 font-brand-orange font-bold uppercase text-brand-orange">
-            ORANGE
+          <span className="inline-flex items-center font-bold">
+            <span className="font-brand-orange text-black">Grateful</span>
+            <span className="ml-1.5 font-brand-orange font-bold uppercase text-brand-orange">
+              ORANGE
+            </span>
           </span>
+          <hr
+            aria-hidden="true"
+            className="mt-1 h-1 w-full rounded-full border-0 bg-[linear-gradient(to_right,#dc2626_0%,#ffffff_50%,#2563eb_100%)]"
+          />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -79,9 +88,21 @@ export default function TopNav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-zinc-50"
+              onClick={() => setActiveLink(link.href)}
+              aria-current={activeLink === link.href ? "page" : undefined}
+              className={`group relative pb-2 text-sm transition-colors ${
+                activeLink === link.href
+                  ? "font-bold text-brand-orange"
+                  : "font-medium text-zinc-600 hover:text-foreground dark:text-zinc-400 dark:hover:text-zinc-50"
+              }`}
             >
               {link.label}
+              <span
+                aria-hidden="true"
+                className={`absolute right-0 -bottom-0 left-0 h-0.5 origin-left rounded-full bg-brand-orange transition-transform duration-200 ${
+                  activeLink === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              />
             </a>
           ))}
         </div>
@@ -105,7 +126,13 @@ export default function TopNav() {
               key={link.href}
               as="a"
               href={link.href}
-              className="rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-foreground dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+              onClick={() => setActiveLink(link.href)}
+              aria-current={activeLink === link.href ? "page" : undefined}
+              className={`rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                activeLink === link.href
+                  ? "font-bold text-brand-orange"
+                  : "font-medium text-zinc-600 hover:bg-zinc-100 hover:text-foreground dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+              }`}
             >
               {link.label}
             </DisclosureButton>

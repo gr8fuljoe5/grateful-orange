@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutSection() {
   return (
@@ -19,14 +21,17 @@ export default function AboutSection() {
           I build thoughtful, high-impact digital experiences.
         </h2>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          I am a Staff Software Engineer focused on full-stack e-commerce and modern web
-          architecture. With 20+ years of experience, I design and deliver scalable front-end
-          systems, collaborate closely with product and design teams, and mentor developers to
-          ship high-quality software.
+          I am a Staff Software Engineer focused on full-stack e-commerce and
+          modern web architecture. With 20+ years of experience, I design and
+          deliver scalable front-end systems, collaborate closely with product
+          and design teams, and mentor developers to ship high-quality software.
         </p>
-        <p className="mt-4 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          I am based in Brooklyn, NY, and I love building products that balance performance,
-          usability, and strong engineering fundamentals.
+        <p className="mt-4 inline-flex items-center gap-2 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+          <FontAwesomeIcon
+            icon={faLocationCrosshairs}
+            className="text-brand-orange"
+          />
+          <span className="whitespace-nowrap">Brooklyn, NY</span>
         </p>
       </div>
     </div>

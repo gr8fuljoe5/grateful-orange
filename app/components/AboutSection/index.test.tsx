@@ -34,7 +34,7 @@ describe("AboutSection", () => {
     expect(
       screen.getByText(/I am a Staff Software Engineer focused on full-stack e-commerce/i),
     ).toBeInTheDocument();
-    expect(screen.getByText(/I am based in Brooklyn, NY/i)).toBeInTheDocument();
+    expect(screen.getByText("Brooklyn, NY")).toBeInTheDocument();
   });
 
   it("renders the about profile image with accessible alt text", () => {

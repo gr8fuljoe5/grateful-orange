@@ -15,16 +15,6 @@
   --font-brand-orange: var(--font-roboto-bold), sans-serif;
 }
 
-.brand-grateful {
-  font-family: var(--font-brand);
-  background: linear-gradient(to right, #dc2626, #ffffff, #2563eb);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1.5px #d1d5db;
-  paint-order: stroke fill;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
