@@ -1,4 +1,5 @@
 import TopNav from "./components/TopNav";
+import AboutSection from "./components/AboutSection";
 
 const sections = [
   {
@@ -52,21 +53,27 @@ export default function Home() {
             className="scroll-mt-20 border-b border-zinc-200/80 dark:border-zinc-800"
           >
             <div className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                {section.title}
-              </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                {section.description}
-              </p>
-              <div className="mt-10 rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-8 dark:border-zinc-700 dark:bg-zinc-900/50">
-                <p className="text-sm font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
-                  {section.title} content placeholder
-                </p>
-                <p className="mt-2 text-zinc-600 dark:text-zinc-400">
-                  Replace this container with your {section.title.toLowerCase()}{" "}
-                  content when you are ready to build out this section.
-                </p>
-              </div>
+              {section.id === "about" ? (
+                <AboutSection />
+              ) : (
+                <>
+                  <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                    {section.title}
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+                    {section.description}
+                  </p>
+                  <div className="mt-10 rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 p-8 dark:border-zinc-700 dark:bg-zinc-900/50">
+                    <p className="text-sm font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+                      {section.title} content placeholder
+                    </p>
+                    <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                      Replace this container with your {section.title.toLowerCase()}{" "}
+                      content when you are ready to build out this section.
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </section>
         ))}
