@@ -1,0 +1,37 @@
+---
+description: Component directory structure, README, and unit test requirements
+globs: app/components/**/*
+alwaysApply: false
+---
+
+# Component Structure
+
+Every new component must live in its own directory under `app/components/`.
+
+## Required layout
+
+```
+app/components/ComponentName/
+  index.tsx       # component implementation (default export)
+  README.md       # usage docs with import example
+  index.test.tsx  # unit tests
+```
+
+## Rules
+
+- Name the directory in PascalCase matching the component (e.g. `TopNav/`).
+- Put the component in `index.tsx`, not `ComponentName.tsx`.
+- Import via the directory path: `import TopNav from "@/app/components/TopNav"`.
+- Add a `README.md` with purpose, usage example, and how to run tests.
+- Add `index.test.tsx` covering key render and interaction behavior.
+- Run tests with `npm run test:run` (or `npm test` in watch mode).
+- Keep Headless UI and other client-only APIs in `index.tsx` behind `'use client'` when needed.
+
+## Example
+
+```
+app/components/TopNav/
+  index.tsx
+  README.md
+  index.test.tsx
+```

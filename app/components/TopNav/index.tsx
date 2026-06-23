@@ -1,0 +1,120 @@
+"use client";
+
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import Image from "next/image";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
+
+function MenuIcon({ open }: { open: boolean }) {
+  if (open) {
+    return (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      />
+    </svg>
+  );
+}
+
+export default function TopNav() {
+  return (
+    <Disclosure
+      as="header"
+      className="sticky top-0 z-50 w-full border-b border-zinc-200/80 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 dark:border-zinc-800"
+    >
+      <nav
+        aria-label="Primary"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <a
+          href="#"
+          aria-label="Grateful Orange home"
+          className="flex shrink-0 items-center"
+        >
+          <Image
+            src="/logo.png"
+            alt="Grateful Orange"
+            width={200}
+            height={54}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
+        </a>
+
+        <div className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-zinc-600 transition-colors hover:text-foreground dark:text-zinc-400 dark:hover:text-zinc-50"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-zinc-600 hover:bg-zinc-100 hover:text-foreground md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800">
+          {({ open }) => (
+            <>
+              <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+              <MenuIcon open={open} />
+            </>
+          )}
+        </DisclosureButton>
+      </nav>
+
+      <DisclosurePanel className="border-t border-zinc-200/80 md:hidden dark:border-zinc-800">
+        <div className="flex flex-col gap-1 px-4 py-3 sm:px-6">
+          {navLinks.map((link) => (
+            <DisclosureButton
+              key={link.href}
+              as="a"
+              href={link.href}
+              className="rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-foreground dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+            >
+              {link.label}
+            </DisclosureButton>
+          ))}
+        </div>
+      </DisclosurePanel>
+    </Disclosure>
+  );
+}
