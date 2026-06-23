@@ -1,6 +1,6 @@
 # TopNav
 
-Sticky top navigation bar for the single-page layout. Renders the site logo and anchor links to each page section. Uses Headless UI `Disclosure` for the mobile menu.
+Sticky top navigation bar for the single-page layout. Renders the branded text heading and anchor links to each page section. Uses Headless UI `Disclosure` for the mobile menu.
 
 ## Usage
 
@@ -24,10 +24,16 @@ export default function Page() {
 - Mobile: hamburger toggle opens a collapsible panel with the same links.
 - Links target section anchors: `#about`, `#services`, `#work`, `#experience`, `#skills`, `#contact`.
 
+## Brand styling
+
+- Font: Space Grotesk (`font-brand`)
+- **Grateful**: red → white → blue gradient with black text outline (`.brand-grateful`)
+- **Orange**: bold orange (`text-brand-orange`)
+
 ## Dependencies
 
 - `@headlessui/react` — responsive disclosure menu
-- `next/image` — optimized logo rendering from `/public/logo.png`
+- `next/font/google` — Space Grotesk loaded in root layout
 
 ## Tests
 

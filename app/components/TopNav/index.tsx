@@ -5,7 +5,6 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import Image from "next/image";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -67,16 +66,12 @@ export default function TopNav() {
         <a
           href="#"
           aria-label="Grateful Orange home"
-          className="flex shrink-0 items-center"
+          className="flex shrink-0 items-center font-brand text-xl tracking-tight sm:text-4xl font-bold"
         >
-          <Image
-            src="/logo.png"
-            alt="Grateful Orange"
-            width={200}
-            height={54}
-            priority
-            className="h-10 w-auto sm:h-12"
-          />
+          <span className="brand-grateful">Grateful</span>
+          <span className="ml-1.5 font-brand-orange font-bold uppercase text-brand-orange">
+            ORANGE
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -94,7 +89,9 @@ export default function TopNav() {
         <DisclosureButton className="inline-flex items-center justify-center rounded-md p-2 text-zinc-600 hover:bg-zinc-100 hover:text-foreground md:hidden dark:text-zinc-400 dark:hover:bg-zinc-800">
           {({ open }) => (
             <>
-              <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
+              <span className="sr-only">
+                {open ? "Close menu" : "Open menu"}
+              </span>
               <MenuIcon open={open} />
             </>
           )}

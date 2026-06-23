@@ -1,32 +1,19 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import TopNav from "./index";
-
-vi.mock("next/image", () => ({
-  default: ({
-    src,
-    alt,
-    ...props
-  }: {
-    src: string;
-    alt: string;
-    [key: string]: unknown;
-  }) => (
-    // eslint-disable-next-line @next/next/no-img-element -- mock for unit tests
-    <img src={src} alt={alt} {...props} />
-  ),
-}));
 
 afterEach(() => {
   cleanup();
 });
 
 describe("TopNav", () => {
-  it("renders the logo and primary navigation", () => {
+  it("renders the brand text and primary navigation", () => {
     render(<TopNav />);
 
-    expect(screen.getByRole("img", { name: "Grateful Orange" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Grateful Orange home" })).toBeInTheDocument();
+    expect(screen.getByText("Grateful")).toBeInTheDocument();
+    expect(screen.getByText("ORANGE")).toBeInTheDocument();
     expect(screen.getByRole("navigation", { name: "Primary" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Grateful Orange home" })).toHaveAttribute(
       "href",
