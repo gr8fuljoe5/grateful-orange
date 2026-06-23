@@ -42,6 +42,20 @@ describe("TopNav", () => {
     }
   });
 
+  it("keeps the selected link active after click", async () => {
+    const user = userEvent.setup();
+    render(<TopNav />);
+
+    const aboutLink = screen.getByRole("link", { name: "About" });
+    expect(aboutLink).toHaveAttribute("aria-current", "page");
+
+    const contactLink = screen.getByRole("link", { name: "Contact" });
+    await user.click(contactLink);
+
+    expect(contactLink).toHaveAttribute("aria-current", "page");
+    expect(aboutLink).not.toHaveAttribute("aria-current");
+  });
+
   it("opens the mobile menu when the toggle is clicked", async () => {
     const user = userEvent.setup();
     render(<TopNav />);
