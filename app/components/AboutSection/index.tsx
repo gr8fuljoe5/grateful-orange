@@ -17,7 +17,7 @@ export default function AboutSection() {
       </div>
 
       <div className="text-center md:text-left">
-        <h2 className="text-3xl font-semibold tracking-tight text-foreground font-orbitron sm:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
           We build thoughtful, high-impact digital experiences.
         </h2>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">

@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "title": "Full-Stack Product Development",
+      "blurb": "We design and ship end-to-end digital products, from front-end experience to API-integrated application flows that support real business outcomes."
+    },
+    {
+      "title": "SaaS Product Engineering",
+      "blurb": "We build scalable SaaS platforms with clean architecture, maintainable code, and a strong focus on usability, performance, and long-term extensibility."
+    },
+    {
+      "title": "Modern Front-End Architecture",
+      "blurb": "We create robust front-end foundations using modern frameworks and component systems that enable faster delivery and consistent UX across large applications."
+    },
+    {
+      "title": "E-commerce Experience Design",
+      "blurb": "We deliver conversion-focused commerce experiences that balance brand storytelling, technical reliability, and frictionless customer journeys."
+    },
+    {
+      "title": "AI-Enabled Product Implementation",
+      "blurb": "We help teams turn AI ideas into practical features by integrating intelligent workflows and model-driven functionality into production-ready products."
+    },
+    {
+      "title": "Technical Leadership & Team Mentorship",
+      "blurb": "We lead cross-functional teams, guide architecture decisions, and mentor developers to raise code quality, improve collaboration, and accelerate delivery."
+    }
+  ]
+}

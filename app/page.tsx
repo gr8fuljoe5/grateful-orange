@@ -57,7 +57,7 @@ export default function Home() {
                 <AboutSection />
               ) : (
                 <>
-                  <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                  <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                     {section.title}
                   </h2>
                   <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">

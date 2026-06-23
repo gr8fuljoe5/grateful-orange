@@ -72,18 +72,14 @@ export default function TopNav() {
           className="flex shrink-0 flex-col font-brand text-xl tracking-tight sm:text-4xl"
         >
           <span className="inline-flex items-center font-bold">
-            <span className="font-brand-orange text-black">Grateful</span>
+            <span className="font-heading text-stone-700">Grateful</span>
             <span className="ml-1.5 font-brand-orange font-bold uppercase text-brand-orange">
               ORANGE
             </span>
           </span>
-          <hr
-            aria-hidden="true"
-            className="mt-1 h-1 w-full rounded-full border-0 bg-[linear-gradient(to_right,#dc2626_0%,#ffffff_50%,#2563eb_100%)]"
-          />
         </a>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-8 font-secondary md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -119,8 +115,8 @@ export default function TopNav() {
         </DisclosureButton>
       </nav>
 
-      <DisclosurePanel className="border-t border-zinc-200/80 md:hidden dark:border-zinc-800">
-        <div className="flex flex-col gap-1 px-4 py-3 sm:px-6">
+        <DisclosurePanel className="border-t border-zinc-200/80 md:hidden dark:border-zinc-800">
+          <div className="flex flex-col gap-1 px-4 py-3 font-secondary sm:px-6">
           {navLinks.map((link) => (
             <DisclosureButton
               key={link.href}
