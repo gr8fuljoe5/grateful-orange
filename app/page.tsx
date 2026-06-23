@@ -1,5 +1,6 @@
 import TopNav from "./components/TopNav";
 import AboutSection from "./components/AboutSection";
+import ServicesSection from "./components/ServicesSection";
 
 const sections = [
   {
@@ -27,12 +28,6 @@ const sections = [
       "Placeholder for your professional history, roles, and key accomplishments.",
   },
   {
-    id: "skills",
-    title: "Skills",
-    description:
-      "Placeholder for technical skills, tools, and areas of expertise.",
-  },
-  {
     id: "contact",
     title: "Contact",
     description:
@@ -55,6 +50,8 @@ export default function Home() {
             <div className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
               {section.id === "about" ? (
                 <AboutSection />
+              ) : section.id === "services" ? (
+                <ServicesSection />
               ) : (
                 <>
                   <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
