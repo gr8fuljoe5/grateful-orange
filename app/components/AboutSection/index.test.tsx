@@ -27,12 +27,14 @@ describe("AboutSection", () => {
 
     expect(
       screen.getByRole("heading", {
-        name: "I build thoughtful, high-impact digital experiences.",
+        name: "We build thoughtful, high-impact digital experiences.",
       }),
     ).toBeInTheDocument();
 
     expect(
-      screen.getByText(/I am a Staff Software Engineer focused on full-stack e-commerce/i),
+      screen.getByText(
+        /Grateful Orange is a software engineering company focused on SaaS products, websites, and AI projects/i,
+      ),
     ).toBeInTheDocument();
     expect(screen.getByText("Brooklyn, NY")).toBeInTheDocument();
   });

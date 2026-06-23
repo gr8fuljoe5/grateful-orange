@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Geist, Geist_Mono, Roboto, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron, Roboto, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 config.autoAddCss = false;
@@ -27,6 +27,12 @@ const robotoBold = Roboto({
   weight: "700",
 });
 
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Grateful Orange",
   description: "Software engineer portfolio and services",
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${robotoBold.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${robotoBold.variable} ${orbitron.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -17,14 +17,15 @@ export default function AboutSection() {
       </div>
 
       <div className="text-center md:text-left">
-        <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          I build thoughtful, high-impact digital experiences.
+        <h2 className="text-3xl font-semibold tracking-tight text-foreground font-orbitron sm:text-4xl">
+          We build thoughtful, high-impact digital experiences.
         </h2>
         <p className="mt-5 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-          I am a Staff Software Engineer focused on full-stack e-commerce and
-          modern web architecture. With 20+ years of experience, I design and
-          deliver scalable front-end systems, collaborate closely with product
-          and design teams, and mentor developers to ship high-quality software.
+          Grateful Orange is a software engineering company focused on SaaS
+          products, websites, and AI projects. With 20+ years of experience, we
+          design and deliver scalable front-end systems, collaborate closely
+          with product and design partners, and mentor developers to ship
+          high-quality software.
         </p>
         <p className="mt-4 inline-flex items-center gap-2 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
           <FontAwesomeIcon
