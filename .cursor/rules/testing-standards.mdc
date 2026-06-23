@@ -1,0 +1,23 @@
+---
+description: Unit test standards for React components
+globs: **/*.test.tsx
+alwaysApply: false
+---
+
+# Testing Standards
+
+Write tests that validate behavior users experience.
+
+## Rules
+
+- Prefer `@testing-library/react` queries by role/label/text over implementation details.
+- Include at least one interaction test for interactive components.
+- Assert behavior and accessibility state, not Tailwind class names.
+- Mock framework-specific components only when necessary (for example `next/image`).
+- Clean up between tests to avoid cross-test leakage.
+- Run tests with `npm run test:run` before finishing.
+
+## Avoid
+
+- Snapshot-only tests as the primary assertion strategy.
+- Brittle selectors tied to DOM structure that is likely to change.

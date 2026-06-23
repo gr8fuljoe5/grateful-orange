@@ -1,0 +1,22 @@
+---
+description: Keep Next App Router server/client boundaries explicit
+globs: app/**/*.tsx
+alwaysApply: false
+---
+
+# App Router Boundaries
+
+Default to Server Components in `app/`.
+
+## Rules
+
+- Do not add `'use client'` unless the file needs browser-only behavior.
+- Use `'use client'` for hooks (`useState`, `useEffect`), DOM APIs, and interactive libraries like Headless UI.
+- Keep client boundaries as small as possible by moving interactivity into leaf components.
+- Prefer data fetching in Server Components when possible.
+- Avoid passing non-serializable props from Server Components to Client Components.
+
+## Quick check
+
+- Can this render without JavaScript? Keep it server.
+- Does this require user interaction state? Make only that component client.

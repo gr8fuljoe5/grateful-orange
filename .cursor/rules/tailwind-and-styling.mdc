@@ -1,0 +1,23 @@
+---
+description: Tailwind-first styling and design token conventions
+globs: app/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# Tailwind And Styling
+
+Use Tailwind utilities as the primary styling approach.
+
+## Rules
+
+- Prefer Tailwind utility classes in component markup for local styling.
+- Reuse global tokens/variables from `app/globals.css` (`background`, `foreground`, fonts).
+- Avoid one-off inline styles unless dynamic values require them.
+- Keep custom CSS in `globals.css` minimal and cross-cutting (tokens, resets, shared behavior).
+- Preserve reduced-motion behavior for scroll/animation effects.
+- Use consistent spacing and typography scales across sections/components.
+
+## Images
+
+- Use `next/image` in app code for static assets in `public/`.
+- Provide meaningful `alt` text for informative images.

@@ -1,0 +1,21 @@
+---
+description: Require metadata for pages and layouts
+globs: app/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Metadata And SEO
+
+Every new page should include clear metadata.
+
+## Rules
+
+- Define meaningful `metadata` for layouts/pages (`title`, `description`) when adding routes.
+- Keep titles specific to the page content; avoid placeholders.
+- Keep descriptions concise and user-focused.
+- Revisit metadata when page purpose changes significantly.
+- Ensure navigation labels and section headings align with metadata intent.
+
+## For this project
+
+- Keep branding consistent with "Grateful Orange".

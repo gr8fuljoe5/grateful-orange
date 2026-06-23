@@ -1,0 +1,23 @@
+---
+description: Accessibility baseline for app UI and components
+globs: app/**/*.tsx
+alwaysApply: false
+---
+
+# Accessibility Baseline
+
+Accessibility is required for all new UI.
+
+## Rules
+
+- Use semantic landmarks where applicable: `header`, `nav`, `main`, `section`, `footer`.
+- Icon-only buttons/links must have an accessible name (`aria-label` or visible text).
+- Keep heading hierarchy logical (`h1` then `h2`, etc.).
+- Ensure keyboard users can reach and operate interactive elements.
+- Use visible focus styles (do not remove focus outline without replacement).
+- Prefer Testing Library role-based queries in tests (`getByRole`) to enforce accessible markup.
+
+## Navigation/anchors
+
+- Every `href="#section-id"` must map to an existing element with `id="section-id"`.
+- Sticky header pages should use section scroll offset (`scroll-mt-*`) to prevent clipped headings.
