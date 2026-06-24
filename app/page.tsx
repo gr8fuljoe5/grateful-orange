@@ -1,6 +1,7 @@
 import TopNav from "./components/TopNav";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
+import WorkSection from "./components/WorkSection";
 
 const sections = [
   {
@@ -20,12 +21,6 @@ const sections = [
     title: "Work",
     description:
       "Placeholder for featured projects, case studies, and portfolio highlights.",
-  },
-  {
-    id: "experience",
-    title: "Experience",
-    description:
-      "Placeholder for your professional history, roles, and key accomplishments.",
   },
   {
     id: "contact",
@@ -52,6 +47,8 @@ export default function Home() {
                 <AboutSection />
               ) : section.id === "services" ? (
                 <ServicesSection />
+              ) : section.id === "work" ? (
+                <WorkSection />
               ) : (
                 <>
                   <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">

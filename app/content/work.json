@@ -1,0 +1,95 @@
+{
+  "intro": "I build digital products that connect business goals, user needs, and engineering quality. Over the last 20+ years, I have grown from producer and web developer into a full-stack and frontend architecture leader focused on shipping thoughtful, high-impact software.",
+  "featured": [
+    {
+      "company": "Eargo",
+      "role": "Staff Software Engineer, Full Stack E-commerce",
+      "period": "Apr 2024 - Present",
+      "location": "Remote",
+      "summary": "I lead full-stack e-commerce work focused on customer experience, performance, and measurable business outcomes.",
+      "highlights": [
+        "Partner across product, design, and engineering to ship customer-facing improvements end to end.",
+        "Balance speed and quality while keeping the storefront stable, reliable, and conversion-focused.",
+        "Own technical decisions from architecture through implementation and release."
+      ]
+    },
+    {
+      "company": "Rightpoint + TandemSeven",
+      "role": "Frontend Leadership Across Consulting and Enterprise Delivery",
+      "period": "Feb 2013 - Jan 2024",
+      "location": "New York, United States",
+      "summary": "I led frontend architecture, client strategy, and team delivery across major consulting engagements in data-heavy and enterprise environments.",
+      "highlights": [
+        "Advised clients on frontend strategy, framework selection, and architecture decisions.",
+        "Led frontend teams through complex engagements from planning through delivery.",
+        "Built and scaled reusable frontend tooling, standards, and implementation patterns.",
+        "Built production applications and interactive prototypes for testing and stakeholder alignment.",
+        "Supported major institutions including Bank of America, Goldman Sachs, Credit Suisse, and Barclays."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "company": "Major League Baseball",
+      "role": "User Interface Engineer",
+      "period": "2010 - 2012",
+      "location": "New York, NY",
+      "summary": "I designed and developed the presentation layer for MLBAM web properties, focusing on high-traffic reliability and polished user experience.",
+      "highlights": [
+        "Built advanced JavaScript, HTML, and CSS interfaces for MLB and associated properties.",
+        "Implemented UI features that supported large-scale content and traffic demands.",
+        "Delivered front-end integrations across XML/JSON and JSP/JSTL-driven systems."
+      ]
+    },
+    {
+      "company": "Major League Baseball",
+      "role": "Sr. Technical Producer",
+      "period": "2006 - 2010",
+      "location": "New York, NY",
+      "summary": "I managed technical production projects from concept to implementation across MLBAM network features and functionality.",
+      "highlights": [
+        "Collaborated with design, technical, editorial, and marketing teams on cross-functional launches.",
+        "Balanced multiple concurrent initiatives while delivering under strict deadlines.",
+        "Improved production execution through tighter planning and implementation oversight."
+      ]
+    },
+    {
+      "company": "Major League Baseball",
+      "role": "Marketing Producer",
+      "period": "2005 - 2006",
+      "location": "New York, NY",
+      "summary": "I partnered with MLB clubs and internal teams to optimize official team sites and improve digital marketing performance.",
+      "highlights": [
+        "Supported club-focused web strategy and performance improvements.",
+        "Worked directly with teams including the Chicago White Sox and Kansas City Royals.",
+        "Aligned marketing and technical execution to strengthen site outcomes."
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "period": "2012",
+      "company": "exfm",
+      "role": "Software Developer",
+      "summary": "Built client-side and server-side apps with Node.js and JavaScript while supporting mobile app efforts."
+    },
+    {
+      "period": "2004 - 2005",
+      "company": "Direct Holdings Worldwide",
+      "role": "Senior Producer / Project Manager",
+      "summary": "Led e-commerce process and frontend workflow improvements across design and engineering teams."
+    },
+    {
+      "period": "2003 - 2004",
+      "company": "Slim Fast Foods Company",
+      "role": "International Web Developer",
+      "summary": "Owned development across international and domestic web properties and CMS-integrated experiences."
+    },
+    {
+      "period": "2000 - 2001",
+      "company": "Breakaway Solutions",
+      "role": "Web Developer",
+      "summary": "Delivered corporate web solutions with designers and project managers across client engagements."
+    }
+  ]
+}

@@ -28,7 +28,6 @@ describe("TopNav", () => {
       { name: "About", href: "#about" },
       { name: "Services", href: "#services" },
       { name: "Work", href: "#work" },
-      { name: "Experience", href: "#experience" },
       { name: "Contact", href: "#contact" },
     ];
 
