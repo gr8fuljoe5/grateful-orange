@@ -2,6 +2,7 @@ import TopNav from "./components/TopNav";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import WorkSection from "./components/WorkSection";
+import SkillsSection from "./components/SkillsSection";
 
 const sections = [
   {
@@ -23,6 +24,12 @@ const sections = [
       "Placeholder for featured projects, case studies, and portfolio highlights.",
   },
   {
+    id: "skills",
+    title: "Skills",
+    description:
+      "Core technical and leadership capabilities across product engineering and delivery.",
+  },
+  {
     id: "contact",
     title: "Contact",
     description:
@@ -42,13 +49,35 @@ export default function Home() {
             id={section.id}
             className="scroll-mt-20 border-b border-zinc-200/80 dark:border-zinc-800"
           >
-            <div className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
+            <div
+              className={`mx-auto flex max-w-6xl flex-col justify-center px-4 sm:px-6 lg:px-8 ${
+                section.id === "contact" ? "py-12" : "min-h-[70vh] py-20"
+              }`}
+            >
               {section.id === "about" ? (
                 <AboutSection />
               ) : section.id === "services" ? (
                 <ServicesSection />
               ) : section.id === "work" ? (
                 <WorkSection />
+              ) : section.id === "skills" ? (
+                <SkillsSection />
+              ) : section.id === "contact" ? (
+                <>
+                  <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                    Contact
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+                    Have a project in mind or looking for a technical partner?
+                    Let&apos;s connect.
+                  </p>
+                  <a
+                    href="mailto:joe@gratefulorange.com"
+                    className="bg-brand-orange mt-8 inline-flex w-fit items-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+                  >
+                    Email joe@gratefulorange.com
+                  </a>
+                </>
               ) : (
                 <>
                   <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
