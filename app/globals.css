@@ -26,6 +26,10 @@
   body {
     color: var(--foreground);
   }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    color: #ffffff !important;
+  }
 }
 
 html {
@@ -44,9 +48,8 @@ body {
   font-family: var(--font-secondary), Arial, Helvetica, sans-serif;
 }
 
-main :is(h1, h2, h3, h4, h5, h6) {
+:is(h1, h2, h3, h4, h5, h6) {
   font-family: var(--font-heading);
-  color: var(--color-stone-700);
 }
 
 .font-secondary {

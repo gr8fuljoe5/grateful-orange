@@ -11,7 +11,9 @@ describe("WorkSection", () => {
   it("renders the section heading and intro copy", () => {
     render(<WorkSection />);
 
-    expect(screen.getByRole("heading", { level: 2, name: "Work" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { level: 2, name: "Work" }),
+    ).toBeInTheDocument();
     expect(screen.getByText(workData.intro)).toBeInTheDocument();
   });
 
@@ -19,7 +21,7 @@ describe("WorkSection", () => {
     render(<WorkSection />);
 
     expect(
-      screen.getByRole("heading", { level: 3, name: "Featured Experience" }),
+      screen.getByRole("heading", { level: 3, name: "Recent Experience" }),
     ).toBeInTheDocument();
 
     for (const role of workData.featured) {
