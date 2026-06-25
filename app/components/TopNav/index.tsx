@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Disclosure,
   DisclosureButton,
@@ -55,6 +55,43 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export default function TopNav() {
   const [activeLink, setActiveLink] = useState("#about");
+
+  useEffect(() => {
+    const sectionIds = navLinks.map((link) => link.href.replace("#", ""));
+
+    const updateActiveLinkFromScroll = () => {
+      let nextActiveLink = "#about";
+      const scrollMarker = window.scrollY + 140;
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+
+        if (!section) {
+          continue;
+        }
+
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        if (scrollMarker >= sectionTop) {
+          nextActiveLink = `#${id}`;
+        }
+      }
+
+      setActiveLink((previous) =>
+        previous === nextActiveLink ? previous : nextActiveLink,
+      );
+    };
+
+    updateActiveLinkFromScroll();
+    window.addEventListener("scroll", updateActiveLinkFromScroll, {
+      passive: true,
+    });
+    window.addEventListener("resize", updateActiveLinkFromScroll);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveLinkFromScroll);
+      window.removeEventListener("resize", updateActiveLinkFromScroll);
+    };
+  }, []);
 
   return (
     <Disclosure
