@@ -3,6 +3,7 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import WorkSection from "./components/WorkSection";
 import SkillsSection from "./components/SkillsSection";
+import Footer from "./components/Footer";
 
 const sections = [
   {
@@ -101,6 +102,8 @@ export default function Home() {
           </section>
         ))}
       </main>
+
+      <Footer />
     </div>
   );
 }
