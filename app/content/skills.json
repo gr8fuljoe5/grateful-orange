@@ -30,5 +30,57 @@
       "blurb": "Cross-functional teams move faster with clear technical direction, practical mentorship, and engineering standards that elevate quality and collaboration.",
       "icon": "handshake"
     }
-  ]
+  ],
+  "organizedSkills": [
+    {
+      "category": "Product Engineering",
+      "items": [
+        "Full-stack web application development",
+        "E-commerce platform engineering",
+        "SaaS product delivery",
+        "Performance and reliability optimization",
+        "Shipping customer-facing improvements end-to-end"
+      ]
+    },
+    {
+      "category": "Front-End & UX",
+      "items": [
+        "Front-end architecture and component systems",
+        "React application and UI framework development",
+        "Data-rich, interactive interface engineering",
+        "JavaScript, HTML, and CSS implementation",
+        "Responsive and accessible interface development",
+        "Design and product collaboration",
+        "Interactive prototyping and stakeholder alignment"
+      ]
+    },
+    {
+      "category": "Back-End & Integration",
+      "items": [
+        "Node.js application development",
+        "API and data integration (JSON/XML)",
+        "Server-rendered application integration patterns",
+        "CMS-connected experience implementation"
+      ]
+    },
+    {
+      "category": "Leadership & Delivery",
+      "items": [
+        "Technical strategy and architecture decisions",
+        "Cross-functional team leadership",
+        "Client collaboration and stakeholder communication",
+        "Engineering standards and reusable tooling",
+        "Mentorship and developer coaching",
+        "Project delivery in enterprise and high-traffic environments"
+      ]
+    }
+  ],
+  "sources": {
+    "derivedFrom": [
+      "app/content/work.json",
+      "app/components/AboutSection/index.tsx",
+      "https://www.linkedin.com/in/jkanakaraj/"
+    ],
+    "note": "Skills are organized from repository profile/work data and verified against public LinkedIn profile signals."
+  }
 }
